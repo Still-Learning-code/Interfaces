@@ -1,0 +1,27 @@
+//chp 20 Interfaces
+
+interface MyInterface {
+     fun abstractMethod()
+     fun concreteMethod(){
+          println("This is a concrete method")
+     }
+     val property:String
+     val propertyWithDefault:String
+             get() ="Default"
+}
+ class MyClass: MyInterface {
+      override fun abstractMethod(){
+           println("AbstractMethod implemented")
+      }
+      override val property:String ="Property value"
+ }
+
+ fun main(args: Array<String>) {
+
+     val obj = MyClass()
+         obj.abstractMethod()
+         obj.concreteMethod()
+         println(obj.property)
+         println(obj.propertyWithDefault)
+
+     }
